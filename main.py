@@ -1,0 +1,1 @@
+print("AI GitHub Project Assistant is starting...")

@@ -1,5 +1,9 @@
-def test_github_loader_file_exists():
-    from pathlib import Path
+from app.github_loader import load_github_repo
 
-    file_path = Path("app/github_loader.py")
-    assert file_path.exists()
+
+def test_load_github_repo():
+    repo = load_github_repo("https://github.com/chetan-AI-create/AI-GitHub-Project-Assistant")
+
+    assert repo["name"] == "AI-GitHub-Project-Assistant"
+    assert "language" in repo
+    assert "stars" in repo
